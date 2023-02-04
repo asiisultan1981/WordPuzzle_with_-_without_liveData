@@ -18,10 +18,9 @@ import java.util.*
 
 class FragmentPuzzle : Fragment() {
 
-    lateinit var binding: FragmentPuzzleBinding
+    private lateinit var binding: FragmentPuzzleBinding
     private val TAG = "puzzle"
-    lateinit var puzzleViewModel: PuzzleViewModel
-
+    private lateinit var puzzleViewModel: PuzzleViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -59,8 +58,8 @@ class FragmentPuzzle : Fragment() {
 
         binding.btnOK.setOnClickListener {
             checkAnswer()
-
         }
+
         binding.btnSkip.setOnClickListener {
             puzzleViewModel.onSkip()
         }
